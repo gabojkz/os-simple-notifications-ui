@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: './',
+    base: '/os-simple-notifications-ui/',
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
@@ -10,9 +10,10 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 assetFileNames: (assetInfo) => {
-                    let extType = assetInfo.name.split('.').at(1);
+                    const info = assetInfo.name?.split('.') ?? [];
+                    const extType = info[info.length - 1];
                     if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-                        extType = 'img';
+                        return `assets/img/[name]-[hash][extname]`;
                     }
                     return `assets/${extType}/[name]-[hash][extname]`;
                 },
