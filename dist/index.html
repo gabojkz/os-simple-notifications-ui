@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Notification UI</title>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bba1jz0G.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="toggle-button">
+      <input type="checkbox" id="toggle-button">
+      <label for="toggle-button">
+        <span class="toggle-button-slider"></span>
+      </label>
+    </div>
+
+    <div class="notification">
+      <div class="notification-content">
+        <p class="notification-title">Custome code is not working</p>
+        <p class="notification-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
+        <a href="#" class="btn btn-primary">Ok, got it!</a>
+      </div>
+    </div>
+
+    <div class="notification notification-primary">
+      <div class="notification-icon">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">Custome code is not working</p>
+        <p class="notification-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
+        <a href="#" class="btn btn-primary">Ok, got it!</a>
+        <a href="#" class="btn btn-link">Maybe later</a>
+      </div>
+    </div>
+
+    <div class="notification notification-warning">
+      <div class="notification-icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">Custome code is not working</p>
+      </div>
+      <div style="margin-left: auto;">
+        <a href="#" class="btn btn-link">Update</a>
+      </div>
+    </div>
+
+    <div class="notification notification-warning">
+      <div class="notification-icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">Warning!
+          <span style="font-weight: 400;">
+            code is not working
+          </span>
+        </p>
+      </div>
+      <div style="margin-left: auto;">
+        <a href="#">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="notification notification-success">
+      <div class="notification-icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">
+          Successfully! uploaded 1000 images
+        </p>
+      </div>
+      <div style="margin-left: auto;">
+        <a href="#">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="notification notification-info">
+      <div class="notification-icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">
+          A new version of the app is available
+        </p>
+        <a href="#" class="btn btn-primary">
+          View the changelog
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+      <div style="margin-left: auto;">
+        <a href="#">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="notification notification-danger">
+      <div class="notification-icon">
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">
+          There was a problem with your request
+        </p>
+        <p>There must be at least 10 characters</p>
+        <p>Please try again</p>
+      </div>
+    </div>
+
+    <div class="notification notification-danger">
+      <div class="notification-icon">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="notification-content">
+        <p class="notification-title">
+          Whoops! something went wrong
+        </p>
+      </div>
+      <div style="margin-left: auto;">
+        <a href="#" class="btn btn-link">
+          Send crash report
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  
+
+  </div> <!-- end of #app div -->
+</body>
+</html>
+
+
+<script>
+  // get the toggle button
+  const toggleButton = document.getElementById("toggle-button");
+
+  // toggle theme
+  toggleButton.addEventListener("change", () => {
+    const newTheme = toggleButton.checked ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+
+  // check if the theme is already set
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+  }
+</script>
