@@ -1,14 +1,11 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/os-simple-notifications-ui/',
+    base: './',
     build: {
+        outDir: 'dist',
+        assetsDir: 'assets',
         minify: 'terser',
-        cssMinify: true,
-        rollupOptions: {
-            output: {
-                manualChunks: undefined
-            }
-        }
+        sourcemap: true
     }
 })

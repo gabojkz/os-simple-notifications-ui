@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+
+
 .notification {
   background-color: var(--notification-bg-color);
   padding: $padding;

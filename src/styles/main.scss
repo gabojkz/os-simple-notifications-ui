@@ -1,10 +1,10 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'base/reset';
-@import 'base/typography';
-@import 'components/buttons';
-@import 'components/notification';
-@import 'components/toggle';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'base/reset';
+@use 'base/typography';
+@use 'components/buttons';
+@use 'components/notification';
+@use 'components/toggle';
 
 body {
   background-color: var(--bg-color);

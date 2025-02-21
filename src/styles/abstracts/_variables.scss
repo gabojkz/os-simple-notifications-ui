@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Colors
 $primary-color: #5535B2;
 $secondary-color: #357abd;
@@ -13,7 +15,6 @@ $white: #fff;
 
 $notification-bg-color: #f7f6f9;
 $notification-bg-color-dark: #181916;
-
 
 
 $font-size: 12px;
@@ -67,9 +68,9 @@ $btn-bg-color-dark: #181818;
   --btn-bg-color: #{$btn-bg-color};
 
   @each $variant, $colors in $notification-colors {
-    --notification-#{$variant}-bg: #{map-get($colors, 'bg')};
-    --notification-#{$variant}-text: #{map-get($colors, 'text')};
-    --notification-#{$variant}-border: #{map-get($colors, 'border')};
+    --notification-#{$variant}-bg: #{map.get($colors, 'bg')};
+    --notification-#{$variant}-text: #{map.get($colors, 'text')};
+    --notification-#{$variant}-border: #{map.get($colors, 'border')};
   }
 }
 
