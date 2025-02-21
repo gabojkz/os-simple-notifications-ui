@@ -1,0 +1,88 @@
+.notification {
+  background-color: var(--notification-bg-color);
+  padding: $padding;
+  margin-bottom: 1rem;
+  position: relative;
+  max-width: 754px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: $font-size;
+}
+
+.notification::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2px;
+  background-color: #dcdbe0;
+  position: absolute;
+  left: -2px;
+  top: 0;
+}
+
+.notification-icon {
+  margin-right: 10px;
+}
+
+.notification-title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.notification-description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8f8d99;
+}
+
+.notification-primary::after {
+  background-color: var(--notification-primary-bg);
+}
+
+.notification-primary .notification-icon {
+  color: var(--notification-primary-text);
+}
+
+
+.notification-warning {
+  background-color: #fef9eb;
+  color: #a68e5d;
+
+}
+
+.notification-warning::after {
+  background-color: var(--notification-warning-bg);
+  display: none;
+}
+
+.notification-warning .notification-icon {
+  color: var(--notification-warning-text);
+}
+
+.notification-success {
+  background-color: var(--notification-success-bg);
+  color: var(--notification-success-text);
+}
+
+.notification-success::after {
+  display: none;
+}
+
+.notification-info {
+  background-color: var(--notification-info-bg);
+  color: var(--notification-info-text);
+}
+
+.notification-info::after {
+  background-color: var(--notification-info-text);
+}
+
+.notification-danger {
+  background-color: var(--notification-error-bg);
+  color: var(--notification-error-text);
+}
+
+.notification-danger::after {
+  background-color: var(--notification-error-text);
+}

@@ -1,0 +1,22 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/notification';
+@import 'components/toggle';
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+#app {
+  background-color: var(--inner-bg-color);
+  max-width: 596px;
+  margin: 0 auto;
+  padding: 56px;
+  margin-top: 10vh;
+}

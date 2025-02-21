@@ -1,0 +1,91 @@
+// Colors
+$primary-color: #5535B2;
+$secondary-color: #357abd;
+$text-color: #333;
+$background-color-light: #ebeaef;
+$background-color-dark: #121212;
+
+$inner-bg-color: #fff;
+$inner-bg-color-dark: #121212;
+
+
+$white: #fff;
+
+$notification-bg-color: #f7f6f9;
+$notification-bg-color-dark: #181916;
+
+
+
+$font-size: 12px;
+
+$padding: 10px;
+$margin: 10px;
+
+$notification-colors: (
+  'primary': (
+    'bg': #8c76d4,
+    'text': #8c76d4,
+    'border': #dcdbe0
+  ),
+  'warning': (
+    'bg': #fcc12b,
+    'text': #fcc12b,
+    'border': #dcdbe0
+  ),
+  'error': (
+    'bg': #fff1f6,
+    'text': #7e3146,
+    'border': #dcdbe0
+  ),
+  'success': (
+    'bg': #ecfbf2,
+    'text': #426d55,
+    'border': #dcdbe0
+  ),
+  'info': (
+    'bg': #f0fbfe,
+    'text': #2ba1ee,
+    'border': #dcdbe0,
+  ),
+  'gray': (
+    'bg': #f7f6f9,
+    'text': #303030,
+    'border': #dcdbe0
+  )
+);
+
+$btn-bg-color: #fff;
+$btn-bg-color-dark: #181818;
+
+// Default Theme (Light Mode)
+:root {
+  --bg-color: #{$background-color-light};
+  --text-color: #{$text-color};
+  --inner-bg-color: #{$inner-bg-color};
+  --notification-bg-color: #{$notification-bg-color};
+
+  --btn-bg-color: #{$btn-bg-color};
+
+  @each $variant, $colors in $notification-colors {
+    --notification-#{$variant}-bg: #{map-get($colors, 'bg')};
+    --notification-#{$variant}-text: #{map-get($colors, 'text')};
+    --notification-#{$variant}-border: #{map-get($colors, 'border')};
+  }
+}
+
+
+// Dark Mode Styles
+[data-theme="dark"] {
+  --bg-color: #{$background-color-dark};
+  --bg-color-secondary: #{$background-color-light};
+  --text-color: #{$white};
+  --inner-bg-color: #{$inner-bg-color-dark};
+  --notification-bg-color: #{$notification-bg-color-dark};
+
+  --btn-bg-color: #{$btn-bg-color-dark};
+
+  @each $variant, $colors in $notification-colors {
+    --notification-#{$variant}-bg: #181818;
+    --notification-#{$variant}-text: #717171;
+  }
+}
