@@ -3,7 +3,7 @@
 A modern, customizable notification component system with light/dark theme support.
 
 ## Demo
-[View Live Demo](https://github.com/gabojkz/notification-component)
+[View Live Demo](https://gabojkz.github.io/os-simple-notifications-ui/)
 
 ## Features
 - Multiple notification types (Primary, Warning, Success, Info, Danger)
